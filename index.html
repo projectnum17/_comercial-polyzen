@@ -16,7 +16,7 @@
     <script src="./js/main.js" defer></script>
 </head>
 
-<body>
+<body class="body">
     <!-- header start -->
     <header class="header">
         <div class="wrapper">
@@ -369,8 +369,49 @@
         <!-- proud -->
         <section class="proud">
             <div class="wrapper">
-                <h3 class="proud__title">Наші учні - наша гордість!</h3>
-                <img src="./images/proud_img.webp" alt="Our proud" class="proud__image">
+                <div class="proud__wrapper">
+
+                    <div class="pop__up" id="pop_up">
+                        <div class="pop__up-container">
+                            <div class="pop__up-body" id="pop__up_body">
+                                <!-- Slideshow container -->
+                                <div class="slideshow-container">
+
+                                    <!-- Full-width images with number and caption text -->
+                                    <div class="mySlides fade">
+                                        <img src="./images/form_bg.webp" style="width:100%">
+                                    </div>
+
+                                    <div class="mySlides fade">
+                                        <img src="./images/form_bg.webp" style="width:100%">
+                                    </div>
+
+                                    <div class="mySlides fade">
+                                        <img src="./images/form_bg.webp" style="width:100%">
+                                    </div>
+
+                                    <!-- Next and previous buttons -->
+                                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                </div>
+                                <br>
+
+                                <!-- The dots/circles -->
+                                <div style="text-align:center">
+                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                    <span class="dot" onclick="currentSlide(3)"></span>
+                                </div>
+                                <div class="pop__up-close" id="pop_up_close">&#10006</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="proud__title">Наші учні - наша гордість!</h3>
+                    <a href="#!" class="pround__link" id="open_pop_up">
+                        <img src="./images/proud_img.webp" alt="Our proud" class="proud__image">
+                    </a>
+                </div>
             </div>
         </section>
         <!-- proud -->
@@ -470,15 +511,32 @@
             <div class="wrapper">
                 <h4 class="form__title">Дійте без сумнівів, а якщо залишились питання - ми дамо Вам відповіді!</h4>
             </div>
+            <!-- modal -->
+            <div class="overlay js-overlay-thank-you">
+                <div class="popup js-thank-you">
+                    <div class="popup-text">
+                        <h4>Ми звʼяжемося з Вами найближчим часом!</h4>
+                        <p>
+                            А поки запрошуємо вас приєднатися до нашої сторінки
+                            <span>
+                                <a href="#!">Instagram</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
             <div class="form__wrapper">
                 <div class="form__wrapper-contact">
-                    <form action="">
-                        <input class="name" name="name" type="name" placeholder="Ім'я" required>
-                        <input class="phone" name="phone" type="phone" placeholder="Номер телефону" required>
-                        <input class="email" name="email" type="email" placeholder="Е-мейл" required>
-                        <button class="btn">Надіслати</button>
+                    <form class="form" id="form" name="form">
+                        <input class="form-field name" name="name" type="name" placeholder="Ім'я" required>
+                        <input class="form-field phone" name="phone" type="phone" placeholder="Номер телефону" required>
+                        <input class="form-field email" name="email" type="email" placeholder="Е-мейл" required>
+                        <!-- <button class="form-button btn">Надіслати</button> -->
+                        <button class="form-button btn"><span class="text-button">Надіслати</span></button>
                     </form>
                 </div>
+
             </div>
         </section>
 
