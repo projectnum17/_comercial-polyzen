@@ -965,7 +965,10 @@ html.done {
     opacity: .8;
     transition: all .2s linear;
 }
-
+.footer__text-block a {
+    display: inline-block;
+    padding-top: 20px;
+}
 /* __________________ FOOTER STYLES END ___________________ */
 
 /* __________________ PRIVACY STYLES START ___________________ */
