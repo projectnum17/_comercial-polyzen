@@ -231,7 +231,7 @@ select:-webkit-autofill:focus {
     transition: all .2s linear;
 }
 
-.wrapper {
+.container {
     max-width: 1606px;
     margin: 0 auto;
     padding: 0 15px;
