@@ -901,14 +901,14 @@ html.done {
     padding: 42px 0 69px 0;
 }
 
-.footer__text {
+.footer__content {
     display: flex;
     align-items: flex-start;
     gap: 32px;
 }
 
-.footer__text-ua,
-.footer__text-eng {
+.ua,
+.eng {
     max-width: 772px;
     font-family: 'Inter';
     font-weight: 400;
@@ -917,7 +917,7 @@ html.done {
     color: #414141;
 }
 
-.footer__text-eng {
+.eng {
     margin-bottom: 28px;
 }
 
@@ -962,10 +962,12 @@ html.done {
     opacity: .8;
     transition: all .2s linear;
 }
-.footer__text-block a {
+
+.footer__text a {
     display: inline-block;
     padding-top: 20px;
 }
+
 /* __________________ FOOTER STYLES END ___________________ */
 
 /* __________________ PRIVACY STYLES START ___________________ */
