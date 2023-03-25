@@ -1060,3 +1060,116 @@ html.done {
 }
 
 /* __________________ OFFER STYLES END ___________________ */
+
+/* __________________ ADAPTIVE STYLES START ___________________ */
+@media screen and (max-width: 835px) {
+
+    /* header */
+    .header {
+        padding: 12px 0 10px 0;
+    }
+
+    .header__contact-phone span {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .header__contact-social {
+        margin-right: 0px;
+    }
+
+    .header__contact-phone img {
+        transform: translateY(5%);
+        margin-right: 7px;
+    }
+
+    .header__contact {
+        flex-direction: column-reverse;
+        align-items: end;
+    }
+
+    .header__contact-phone {
+        margin-bottom: 8px;
+    }
+
+    /* header */
+
+    /* intro */
+    .intro {
+        height: 100vh;
+    }
+
+    video {
+        height: 100vh;
+    }
+
+    .intro__title {
+        font-size: 40px;
+        line-height: 50px;
+        padding-top: 170px;
+        margin-bottom: 20px;
+    }
+
+    .intro__subtitle {
+        font-size: 20px;
+        line-height: 32px;
+        margin-bottom: 80px;
+    }
+
+    /* intro */
+
+    /* pupils */
+    .pupils {
+        margin-bottom: 30px;
+    }
+
+    .pupils__title {
+        font-size: 46px;
+        line-height: 70px;
+        padding: 19px 0 32px 0;
+    }
+
+    .pupils__wrapper {
+        transform: translate(0, -60%);
+    }
+
+    .buttons__trainee {
+        font-size: 25px;
+        line-height: 35px;
+        padding: 20px 28px;
+        margin-bottom: 0px;
+    }
+
+    /* pupils */
+
+    /* about */
+    .about {
+        padding-top: 40px;
+        margin-bottom: 70px;
+    }
+
+    .about__title {
+        font-size: 40px;
+        line-height: 55px;
+        margin-bottom: 50px;
+    }
+
+    .about__cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px 15px;
+    }
+
+    /* about */
+
+    /* cards */
+    .cards__block {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px 45px;
+    }
+    .towards__subtitle {
+        transform: translate(0, 0);
+    }
+    /* cards */
+}
+
+/* __________________ ADAPTIVE STYLES END ___________________ */
