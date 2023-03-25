@@ -1166,10 +1166,20 @@ html.done {
         grid-template-columns: repeat(2, 1fr);
         gap: 48px 45px;
     }
+
     .towards__subtitle {
         transform: translate(0, 0);
     }
-    /* cards */
+
+    .cards__block-card {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    
+}
+
+/* cards */
 }
 
 /* __________________ ADAPTIVE STYLES END ___________________ */
