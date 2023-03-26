@@ -1066,6 +1066,25 @@ html.done {
 /* __________________ OFFER STYLES END ___________________ */
 
 /* __________________ ADAPTIVE STYLES START ___________________ */
+@media screen and (max-width: 2050px) {
+    .intro {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1860px) {
+    .intro__title {
+        font-size: 65px;
+        line-height: 75px;
+    }
+
+    .intro__subtitle {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 80px;
+    }
+
+}
 
 @media screen and (max-width: 1460px) {
     .swiper-button-next {
@@ -1103,12 +1122,24 @@ html.done {
         margin-bottom: 80px;
     }
 
-    video {
-        height: 100vh;
-    }
+
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1355px) {}
+
+@media screen and (max-width: 1210px) {
+    .intro__title {
+        font-size: 40px;
+        line-height: 50px;
+        padding-top: 250px;
+        margin-bottom: 20px;
+    }
+
+    .intro__subtitle {
+        font-size: 20px;
+        line-height: 32px;
+        margin-bottom: 80px;
+    }
 
     .first-slide,
     .second-slide {
@@ -1119,6 +1150,52 @@ html.done {
 @media screen and (max-width: 1100px) {
     .cards__block {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .intro__title {
+        font-size: 40px;
+        line-height: 50px;
+        padding-top: 200px;
+        margin-bottom: 20px;
+    }
+
+    .intro__subtitle {
+
+        margin-bottom: 25px;
+    }
+
+    .pupils__title {
+        font-size: 46px;
+        line-height: 70px;
+        padding: 19px 0 32px 0;
+    }
+
+    .about {
+        padding-top: 40px;
+        margin-bottom: 70px;
+    }
+
+    .about__title {
+        font-size: 40px;
+        line-height: 55px;
+        margin-bottom: 50px;
+    }
+
+    .about__cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px 15px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 25px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: 370px;
     }
 }
 
@@ -1309,6 +1386,7 @@ html.done {
     .footer__content {
         display: grid;
     }
+
     .footer__text a {
         display: none;
     }
