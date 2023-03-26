@@ -640,10 +640,10 @@ html.done {
 .pop__up-body {
     margin: auto;
     position: relative;
-    width: 1400px;
+    max-width: 1400px;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.9);
-    padding: 70px;
+    padding: 45px;
 }
 
 .pop__up-close {
@@ -655,7 +655,7 @@ html.done {
 }
 
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 700px;
     position: relative;
     margin: auto;
 }
@@ -1066,11 +1066,6 @@ html.done {
 /* __________________ OFFER STYLES END ___________________ */
 
 /* __________________ ADAPTIVE STYLES START ___________________ */
-@media screen and (max-width: 2050px) {
-    .intro {
-        height: auto;
-    }
-}
 
 @media screen and (max-width: 1860px) {
     .intro__title {
@@ -1121,11 +1116,7 @@ html.done {
         line-height: 32px;
         margin-bottom: 80px;
     }
-
-
 }
-
-@media screen and (max-width: 1355px) {}
 
 @media screen and (max-width: 1210px) {
     .intro__title {
@@ -1389,6 +1380,14 @@ html.done {
 
     .footer__text a {
         display: none;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    .popup {
+        width: 400px;
+        height: 400px;
+        padding: 33px 23px;
     }
 }
 
