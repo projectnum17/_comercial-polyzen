@@ -1236,9 +1236,9 @@ html.done {
         height: auto;
     }
 
-    /* video {
-        height: 100vh;
-    } */
+    video {
+        min-height: 600px;
+    }
 
     .intro__title {
         font-size: 40px;
@@ -1389,6 +1389,184 @@ html.done {
 
     .footer__text a {
         display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .intro__title {
+        font-size: 25px;
+        line-height: 32px;
+        padding-top: 150px;
+        margin-bottom: 15px;
+    }
+
+    .intro__subtitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .form__wrapper-contact {
+        padding: 40px 60px;
+    }
+
+    input {
+        padding: 10px 24px;
+        width: 335px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    video {
+        min-height: 500px;
+    }
+
+    .proud {
+        margin-bottom: 70px;
+    }
+
+    .testimonials__title {
+        font-size: 32px;
+        line-height: 35px;
+    }
+
+    .testimonials__descr {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .testimonials__text {
+        margin-bottom: 70px;
+    }
+
+    .form__title {
+        font-size: 32px;
+        line-height: 35px;
+    }
+
+    .form-button {
+        font-size: 17px;
+        line-height: 19px;
+        padding: 20px 28px;
+    }
+
+    .btn {
+        width: 240px;
+    }
+
+    .video {
+        margin-bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .pupils__title {
+        font-size: 29px;
+        line-height: 47px;
+    }
+
+    .intro__title {
+        font-size: 16px;
+        line-height: 25px;
+        padding-top: 122px;
+    }
+
+    .intro__subtitle {
+        font-size: 12px;
+        line-height: 21px;
+    }
+
+    .buttons__trainee {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 12px 28px;
+        margin-bottom: 0px;
+    }
+
+    .towards__title {
+        font-size: 37px;
+        line-height: 45px;
+    }
+
+    .towards__subtitle {
+        font-size: 23px;
+        line-height: 31px;
+        padding-bottom: 0;
+    }
+
+    .cards__block {
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 25px;
+    }
+
+    .towards {
+        margin-bottom: 25px;
+    }
+
+
+    .about__title {
+        font-size: 33px;
+        line-height: 42px;
+        margin-bottom: 25px;
+    }
+
+    .video__text p {
+        font-size: 31px;
+        line-height: 40px;
+        margin-bottom: 23px;
+    }
+
+    .proud__title {
+
+        font-size: 31px;
+        line-height: 40px;
+        margin-bottom: 23px;
+
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: 405px;
+    }
+
+    .testimonials {
+        margin-bottom: 120px;
+    }
+
+    input {
+        padding: 10px 24px;
+        width: 220px;
+        font-size: 12px;
+        line-height: 15px;
+        width: 100%;
+    }
+
+    input::placeholder {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .popup {
+        width: 200px;
+        height: 200px;
+        padding: 37px 0;
+    }
+    .popup-text {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .form__wrapper-contact {
+        margin: 150px 0;
+    }
+
+    .form-button {
+        font-size: 15px;
+        line-height: 16px;
+        padding: 9px 9px;
+    }
+
+    .footer__text-descr_nav {
+        flex-direction: column;
     }
 }
 
