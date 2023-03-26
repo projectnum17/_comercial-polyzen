@@ -61,6 +61,16 @@ new Swiper('.image-slider', {
   slidesPerGroup: 1,
   centerSlides: true,
   loop: true,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+
+    1200: {
+      slidesPerView: 3
+    }
+  }
 });
 
 //form popUp 
