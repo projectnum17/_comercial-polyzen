@@ -1455,6 +1455,10 @@ html.done {
     .footer__text-descr_nav {
         margin-bottom: 25px;
     }
+
+    .towards__bg {
+        top: -200px;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -1539,7 +1543,7 @@ html.done {
 }
 
 @media screen and (max-width: 550px) {
-    
+
 
     .pop__up-container {
         padding: 10px 7px;
