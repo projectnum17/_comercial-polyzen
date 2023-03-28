@@ -300,14 +300,33 @@ select:-webkit-autofill:focus {
 
 /* __________________ intro style start ___________________ */
 .intro {
+    width: 100%;
     height: 100vh;
     text-align: center;
 }
 
+.video {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.video video {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
 
 
-.rgba {
+.video-overlay {
     background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -473,7 +492,6 @@ select:-webkit-autofill:focus {
 
 /* __________________ cards style start ___________________ */
 .cards {
-    /* background: #fff; */
     padding-bottom: 77px;
 }
 
@@ -548,9 +566,7 @@ select:-webkit-autofill:focus {
 /* __________________ about style end ___________________ */
 
 /* __________________ video style start ___________________ */
-/* .video {
-    display: flex;
-} */
+
 .video__wrapper {
     max-width: 1271px;
     margin: 0 auto;
@@ -635,12 +651,13 @@ html.done {
     display: flex;
     width: 100%;
     height: 100%;
+    padding: 20px 40px;
 }
 
 .pop__up-body {
     margin: auto;
     position: relative;
-    max-width: 1400px;
+    max-width: 1550px;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.9);
     padding: 45px;
@@ -655,7 +672,7 @@ html.done {
 }
 
 .slideshow-container {
-    max-width: 700px;
+    max-width: 100%;
     position: relative;
     margin: auto;
 }
@@ -1082,13 +1099,38 @@ html.done {
 }
 
 @media screen and (max-width: 1460px) {
+
+    .swiper-button-prev,
     .swiper-button-next {
-        left: 50px;
-        top: 350px;
+        border-radius: 100%;
+        background: rgb(255 255 255 / 70%);
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .swiper-button-prev:after {
+        font-size: 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-65%, -50%);
+    }
+
+    .swiper-button-next:after {
+        font-size: 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-35%, -50%);
+
+    }
+
+    .swiper-button-next {
+        right: 10px;
     }
 
     .swiper-button-prev {
-        top: 350px;
         left: 10px;
     }
 
@@ -1138,9 +1180,29 @@ html.done {
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .footer__text-descr_nav {
+        flex-wrap: wrap;
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .cards__block {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .pupils__title {
+        font-size: 60px;
+        line-height: 90px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .video video {
+        width: auto;
+        height: 100%;
     }
 }
 
@@ -1179,15 +1241,7 @@ html.done {
         gap: 15px 15px;
     }
 
-    .swiper-button-next:after,
-    .swiper-button-prev:after {
-        font-size: 25px;
-    }
 
-    .swiper-button-next,
-    .swiper-button-prev {
-        top: 370px;
-    }
 }
 
 @media screen and (max-width: 835px) {
@@ -1313,7 +1367,13 @@ html.done {
 
     .cards__block-card img {
         width: 100%;
+        height: 50%;
+        object-fit: cover;
         margin-bottom: 15px;
+    }
+
+    .cards__block-card_text {
+        padding-bottom: 24px;
     }
 
     /* cards */
@@ -1340,16 +1400,16 @@ html.done {
     }
 
     .pop__up-container {
-        padding: 50px;
+        padding: 10px 20px;
     }
 
     .pop__up-body {
-        padding: 35px;
+        padding: 15px;
     }
 
     .pop__up-close {
-        top: 10px;
-        right: 10px;
+        top: 25px;
+        right: 25px;
     }
 
     .first-slide,
@@ -1375,11 +1435,24 @@ html.done {
     }
 
     .footer__content {
-        display: grid;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
-    .footer__text a {
-        display: none;
+    .footer__text-descr {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .footer__text-descr_nav {
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 800px)  {
+    .video {
+        width: auto;
+        height: 500px;
     }
 }
 
@@ -1458,20 +1531,13 @@ html.done {
 }
 
 @media screen and (max-width: 550px) {
+    .pop__up-container {
+        padding: 10px 7px;
+    }
+
     .pupils__title {
         font-size: 29px;
         line-height: 47px;
-    }
-
-    .intro__title {
-        font-size: 16px;
-        line-height: 25px;
-        padding-top: 122px;
-    }
-
-    .intro__subtitle {
-        font-size: 12px;
-        line-height: 21px;
     }
 
     .buttons__trainee {
@@ -1522,11 +1588,6 @@ html.done {
 
     }
 
-    .swiper-button-next,
-    .swiper-button-prev {
-        top: 405px;
-    }
-
     .testimonials {
         margin-bottom: 120px;
     }
@@ -1549,6 +1610,7 @@ html.done {
         height: 200px;
         padding: 37px 0;
     }
+
     .popup-text {
         font-size: 12px;
         line-height: 16px;
@@ -1566,6 +1628,17 @@ html.done {
 
     .footer__text-descr_nav {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .header__contact-phone span {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .form__wrapper-contact {
+        padding: 15px 30px;
     }
 }
 
