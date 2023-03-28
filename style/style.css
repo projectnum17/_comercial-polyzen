@@ -1158,6 +1158,16 @@ html.done {
         line-height: 32px;
         margin-bottom: 80px;
     }
+
+    .pupils__title {
+        font-size: 72px;
+        line-height: 90px;
+    }
+
+    .intro__title {
+        font-size: 60px;
+        line-height: 80px;
+    }
 }
 
 @media screen and (max-width: 1210px) {
@@ -1178,9 +1188,7 @@ html.done {
     .second-slide {
         background-size: cover;
     }
-}
 
-@media screen and (max-width: 1200px) {
     .footer__text-descr_nav {
         flex-wrap: wrap;
     }
@@ -1449,9 +1457,9 @@ html.done {
     }
 }
 
-@media screen and (max-width: 800px)  {
+@media screen and (max-width: 800px) {
     .video {
-        width: auto;
+        /* width: auto; */
         height: 500px;
     }
 }
