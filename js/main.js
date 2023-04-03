@@ -14,8 +14,11 @@
   closePopUp.addEventListener('click', () => {
     popUp.classList.remove('active');
     list.classList.remove('done');
-  })
+  });
+
 }());
+
+
 
 //proud slider
 let slideIndex = 1;
@@ -49,18 +52,24 @@ function showSlides(n) {
 
 
 //slider testimonials
-new Swiper('.image-slider', {
+var swiper = new Swiper('.image-slider', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  loop: true,
+  spaceBetween: 42,
+  coverflowEffect: {
+    rotate: 10,
+    strech: 0,
+    depth: 100,
+    modifier: 2,
+    slideShadows: true,
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   },
-  grabCursor: true,
-  slidesPerView: 3,
-  spaceBetween: 42,
-  autoHeigh: true,
-  slidesPerGroup: 1,
-  centerSlides: true,
-  loop: true,
 
   breakpoints: {
     320: {
@@ -70,38 +79,63 @@ new Swiper('.image-slider', {
     1200: {
       slidesPerView: 3
     }
-  }
+  },
+
 });
 
-//form popUp 
-$(document).ready(function () {
-  $('#form').submit(function () { // проверка на пустоту заполненных полей.
-    if (document.form.name.value == '' || document.form.phone.value == '') {
-      valid = false;
-      return valid;
-    }
-    $.ajax({
-      //type: "POST",
-      //url: "mail/mail.php",
-      data: $(this).serialize()
-    }).done(function () {
-      $('.js-overlay-thank-you').fadeIn();
-      $("body").css("overflow", "hidden");
-      $(this).find('input').val('');
-      $('#form').trigger('reset');
-    });
-    return false;
+
+//if mail sent
+document.addEventListener('wpcf7mailsent', function (e) {
+  $('.overlay').fadeIn(50);
+  $("body").css("overflow-y", "hidden");
+}, false);
+
+//close popUp form
+$('.overlay-close-btn').on('click', function(){
+  $('.overlay').fadeOut(50);
+  $("body").css("overflow-y", "auto");
+})
+
+
+
+
+
+//video play hover
+/* var vid = document.getElementById('video');
+vid.onmouseover = function () {
+  vid.play()
+} */
+
+/* $(window).on('load', function() {
+  $('video')[0].play();
+}); */
+
+//buttons popUp
+
+var popUpButton = document.getElementById('popUpButton');
+
+var noScroll = document.querySelector('html');
+
+var tab = document.getElementById('popUpBody');
+
+var close = document.getElementsByClassName("pop__up-button_close")[0];
+
+
+
+Array.prototype.slice.call(document.querySelectorAll('.button')).forEach(function (element) {
+  element.addEventListener('click', function (ev) {
+    popUpButton.style.transform = 'translateY(0%)';
+    popUpButton.style.transition = 'all 1.2s linear';
+
+    noScroll.style.overflow = 'hidden';
   });
 });
 
-//close
-$(document).mouseup(function (e) { // по клику вне попапа
-  var popup = $('.popup');
-  if (e.target != popup[0] && popup.has(e.target).length === 0) {
-    $('.js-overlay-thank-you').fadeOut();
-    $("body").css("overflow", "auto");
-  }
-});
+close.onclick = function () {
+  popUpButton.style.transform = 'translateY(-500%)';
+  popUpButton.style.transition = 'all 1.2s linear';
+  noScroll.style.overflow = 'auto';
+}
 
 
 
